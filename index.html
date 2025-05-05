@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <title>Scrnli</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a class="logo" href="#!">
+          <img class="logo__img" src="images/logo.svg" alt="logo">
+        </a>
+        <button class="burger-menu" onclick="openModal()"></button>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Converter</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">How it Works</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">About</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="install-btn" href="#">
+          <img class="install-btn-img" src="images/chrome-logo.svg" alt="instal-logo">
+          <p class="install-btn-text">Install Scrnli</p>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="main__wrapper">
+          <h1 class="main__title"><span>Take Screenshot</span>
+          <img src="images/star-title.svg" alt="star"></h1>
+          <h1 class="main__title">Edit Screenshot</h1>
+          <h1 class="main__title">Share Screenshot</h1>
+          <p class="main__text">A screenshot tool with a screen video recording
+            feature. Take screen capture with further edit,
+            download, or text adding.</p>
+            <div class="main__wraper-link">
+              <a class="main__wraper-install" href="#!">
+                <img src="images/chrome-install.svg" alt="chrome-install">
+                <p class="install-text">Install Scrnli</p>
+                <img class="install-arrow" src="images/arrow.svg" alt="">
+              </a>
+              <p class="aviable">Also aviable for</p>
+              <a class="main__platform" href="#!">
+                <span class="main__platform-opera"></span>
+              </a>
+              <a class="main__platform" href="#!">
+                <span class="main__platform-edge"></span>
+              </a>
+              <a class="main__platform" href="#!">
+                <span class="main__platform-firefox"></span>
+              </a>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="modal" id="modal">
+    <div class="modal__logo">
+      <img src="images/logo.svg" alt="">
+    </div>
+    <nav class="nav__modal">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Converter</a>
+        <a href="#" class="nav-link">How it Works</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact Us</a>
+    </nav>
+    <button class="modal-close" onclick="closeModal()"></button>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
