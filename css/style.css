@@ -215,7 +215,7 @@ body{
   display: flex;
   background-color: var(--white);
   border-radius: 32px;
-  box-shadow: 60px 60px 130px 0px rgba(27, 35, 61, 0.07);
+  box-shadow: 60px 60px 110px 0px rgba(27, 35, 61, 0.07);
 }
 .features__item{
   padding: 25px 60px 50px 60px;
@@ -239,10 +239,58 @@ body{
   font-weight: 700;
   margin-bottom: 16px;
 }
-.how-it-works{
-  padding-top: 138px;
+.screenshot{
+  padding-bottom: 100px;
+  background-color: #F7F8FA;
+  position: relative;
+}
+.screen-recorder{
   padding-bottom: 150px;
   background-color: #F7F8FA;
+  position: relative;
+}
+.how-it-works__title{
+  font-family: 'All-Round-Gothic-W01-Bold';
+  font-size: 50px;
+  line-height: normal;
+  margin-bottom: 60px;
+}
+.how-it-works__title-text{
+  font-family: 'All-Round-Gothic-W01-Bold';
+  font-size: 36px;
+  line-height: normal;
+  color: var(--main);
+  margin-bottom: 50px;
+}
+.how-it-works__screenshot-list,
+.how-it-works__recorder-list{
+  display: flex;
+}
+.how-it-works__screenshot-item,
+.how-it-works__recorder-item{
+  text-align: center;
+}
+.how-it-works__screenshot-img,
+.how-it-works__recorder-img{
+  width: auto;
+  height: 365px;
+  margin-top: -33px;
+  margin-bottom: -40px;
+}
+.how-it-works__screenshot-title,
+.how-it-works__recorder-title{
+  font-family: 'All-Round-Gothic-W01-Bold';
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.how-it-works__screenshot-text,
+.how-it-works__recorder-text{
+  padding-left: 89px;
+  padding-right: 89px;
+  opacity: 0.7;
+}
+.slider-dots{
+  display: none;
 }
 
 
@@ -252,6 +300,14 @@ body{
 
 
 
+
+
+@media (max-width:1410px){
+  .how-it-works__screenshot-img, 
+  .how-it-works__recorder-img {
+    height: 300px;
+  } 
+}
 @media (max-width:1260px) {
   .hero{
     padding-top: 60px;
@@ -268,6 +324,15 @@ body{
   .main__title img{
     display: none;
   }
+  .how-it-works__screenshot-list,
+  .how-it-works__recorder-list{
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+		overflow-x: auto;
+    scroll-behavior: smooth;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+  }
 }
 
 @media (max-width:1070px){
@@ -278,6 +343,28 @@ body{
   .aviable,
   .main__platform{
     display: none;
+  }
+  .features__title{
+    margin-bottom: 10px;
+  }
+  .features__text{
+    margin-bottom: 30px;
+  }
+  .features__list{
+    flex-direction: column;
+  }
+  .features__item{
+    padding: 16px 60px 16px 60px;
+    text-align: start;
+    display: flex;
+    align-items: center;
+  }
+  .features__item:not(:last-child)::after{
+    display: none;
+  }
+  .features__img{
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -314,6 +401,13 @@ body{
     url(../images/bg-main-left.svg) -440px 515px no-repeat;
     background-size: 589px, 325px, 350px;
   }
+  .features__item-title{
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .features__item{
+    padding: 0px 75px 0px 75px;
+  }
 }
 @media (max-width:705px){
   .menu{
@@ -337,17 +431,19 @@ body{
   }
   .modal{
     display: block;
-    position: absolute;
+    position: fixed;
     padding: 241px 114px;
     top: -900px;
     width: 100%;
+    height: 100vh;
     left: 0;
     right: 0;
     margin: 0 auto;
     text-align: center;
-    transition: .5s;
+    transition: 0.3s;
     background-color: var(--white);
     background-size: 210px;
+    z-index: 5000;
   }
   .modal__logo{
     position: absolute;
@@ -380,6 +476,25 @@ body{
     max-width: 343px;
   }
 }
+@media (max-width:610px){
+  .hero{
+    padding-bottom: 100px;
+  }
+  .features__item{
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px 40px 20px;
+  }
+  .features__item:not(:last-child)::after{
+    display: block;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: 0;
+    height: 1px;
+    width: 100px;
+  }
+}
 @media (max-width:540px){
   .hero {
     background: url(../images/bg-main.svg) calc(50% + 25px) calc(50% - 225px) no-repeat, 
@@ -389,5 +504,39 @@ body{
   }
   .main__wrapper {
     margin: 280px auto 0;
+  }
+  .screenshot,
+  .screen-recorder{
+    padding-bottom: 50px;
+  }
+  .screen-recorder{
+    padding-top: 50px;
+  }
+  .how-it-works__screenshot-item,
+  .how-it-works__recorder-item{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    scroll-snap-align: start;
+  }
+  .slider-dots {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 20px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-dots a{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--main);
+    opacity: 0.7;
+    transition: opacity ease 250ms;
+    cursor: pointer;
   }
 }
