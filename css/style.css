@@ -292,6 +292,93 @@ body{
 .slider-dots{
   display: none;
 }
+.container-circle{
+  position: relative;
+  display: flex;
+  height: 1049px;
+  background-image: url(../images/circle-section/circle-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top -11px;
+  padding-bottom: 76px;
+}
+.circle__items{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  flex-grow: 1;
+  margin-bottom: 110px;
+}
+.circle__title{
+  font-family: 'All-Round-Gothic-W01-Bold';
+  font-size: 36px;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+.circle__text{
+  font-size: 20px;
+  opacity: 0.7;
+  margin-bottom: 30px;
+  line-height: 160%;
+}
+.circle__link{
+  max-width: 205px;
+  margin: 0 auto;
+}
+.bg-logo{
+  display: flex;
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 32px;
+  box-shadow: 20px 20px 100px 0px rgba(0, 0, 0, 0.05);
+}
+.edge img,
+.finder img,
+.firefox img,
+.opera img,
+.windows img{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.windows{
+  left: calc(50% + -356px);
+  top: calc(50% - 273px);
+}
+.aple{
+  left: calc(50% + -413px);
+  top: calc(50% - 20px);
+}
+.opera{
+  left: calc(50% + -570px);
+  top: calc(50% - 213px);
+}
+.finder{
+  left: calc(50% + -643px);
+  top: calc(50% - -43px);
+}
+.android{
+  left: calc(50% + 225px);
+  top: calc(50% - 290px);
+}
+.chrome{
+  left: calc(50% + 272px);
+  top: calc(50% - 80px);
+}
+.edge{
+  left: calc(50% + 531px);
+  top: calc(50% - 211px);
+}
+.firefox{
+  left: calc(50% + 500px);
+  top: calc(50% - -58px);
+}
+
 
 
 
@@ -307,6 +394,39 @@ body{
   .how-it-works__recorder-img {
     height: 300px;
   } 
+  .windows{
+    left: calc(50% + -300px);
+    top: calc(50% - 273px);
+  }
+  .aple{
+    left: calc(50% + -355px);
+    top: calc(50% - 20px);
+  }
+  .opera{
+    left: calc(50% + -505px);
+    top: calc(50% - 213px);
+  }
+  .finder{
+    left: calc(50% + -535px);
+    top: calc(50% - -109px);
+  }
+  .android{
+    left: calc(50% + 176px);
+    top: calc(50% - 290px);
+  }
+  .chrome{
+    left: calc(50% + 187px);
+    top: calc(50% - 80px);
+  }
+  .edge{
+    left: calc(50% + 380px);
+    top: calc(50% - 211px);
+  }
+  .firefox{
+    left: calc(50% + 404px);
+    top: calc(50% - -58px);
+  }
+  
 }
 @media (max-width:1260px) {
   .hero{
@@ -370,6 +490,41 @@ body{
     margin-left: 0;
     margin-bottom: 0;
   }
+  .bg-logo{
+    transform: scale(0.7);
+  }
+  .windows{
+    left: calc(50% + -300px);
+    top: calc(50% - 273px);
+  }
+  .aple{
+    left: calc(50% + -281px);
+    top: calc(50% - 65px);
+  }
+  .opera{
+    left: calc(50% + -420px);
+    top: calc(50% - 213px);
+  }
+  .finder{
+    left: calc(50% + -417px);
+    top: calc(50% - -22px);
+  }
+  .android{
+    left: calc(50% + 176px);
+    top: calc(50% - 290px);
+  }
+  .chrome{
+    left: calc(50% + 169px);
+    top: calc(50% - 114px);
+  }
+  .edge{
+    left: calc(50% + 310px);
+    top: calc(50% - 211px);
+  }
+  .firefox{
+    left: calc(50% + 267px);
+    top: calc(50% - -18px);
+  }
 }
 
 @media (max-width:900px){
@@ -385,6 +540,38 @@ body{
     url(../images/bg-main-right.svg) calc(50% + 445px) calc(50% + 160px) no-repeat,
     url(../images/bg-main-left.svg) -440px 515px no-repeat;
     background-size: 650px, 325px, 350px;
+  }
+  .windows{
+    left: calc(50% + -188px);
+    top: calc(50% - 423px);
+  }
+  .aple{
+    left: calc(50% + -281px);
+    top: calc(50% - 65px);
+  }
+  .opera{
+    left: calc(50% + -283px);
+    top: calc(50% - 259px);
+  }
+  .finder{
+    left: calc(50% + -370px);
+    top: calc(50% - 163px);
+  }
+  .android{
+    left: calc(50% + 50px);
+    top: calc(50% - 399px);
+  }
+  .chrome{
+    left: calc(50% + 106px);
+    top: calc(50% - 274px);
+  }
+  .edge{
+    left: calc(50% + 187px);
+    top: calc(50% - 154px);
+  }
+  .firefox{
+    left: calc(50% + 95px);
+    top: calc(50% - 42px);
   }
 }
 
@@ -411,6 +598,12 @@ body{
   }
   .features__item{
     padding: 0px 75px 0px 75px;
+  }
+  .circle__title{
+    font-size: 30px;
+  }
+  .circle__text{
+    font-size: 18px;
   }
 }
 @media (max-width:705px){
@@ -479,6 +672,41 @@ body{
     width: 100%;
     max-width: 343px;
   }
+  .bg-logo{
+    transform: scale(0.6);
+  }
+  .windows{
+    left: calc(50% + -133px);
+    top: calc(50% - 423px);
+  }
+  .aple{
+    left: calc(50% + -215px);
+    top: calc(50% - 65px);
+  }
+  .opera{
+    left: calc(50% + -225px);
+    top: calc(50% - 311px);
+  }
+  .finder{
+    left: calc(50% + -297px);
+    top: calc(50% - 163px);
+  }
+  .android{
+    left: calc(50% + 31px);
+    top: calc(50% - 399px);
+  }
+  .chrome{
+    left: calc(50% + 100px);
+    top: calc(50% - 278px);
+  }
+  .edge{
+    left: calc(50% + 157px);
+    top: calc(50% - 154px);
+  }
+  .firefox{
+    left: calc(50% + 63px);
+    top: calc(50% - 42px);
+  }
 }
 @media (max-width:610px){
   .hero{
@@ -511,10 +739,7 @@ body{
   }
   .screenshot,
   .screen-recorder{
-    padding-bottom: 50px;
-  }
-  .screen-recorder{
-    padding-top: 50px;
+    padding-bottom: 100px;
   }
   .how-it-works__screenshot-item,
   .how-it-works__recorder-item{
@@ -525,7 +750,7 @@ body{
   }
   .slider-dots {
     position: absolute;
-    bottom: 0px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     gap: 20px;
@@ -542,5 +767,48 @@ body{
     opacity: 0.7;
     transition: opacity ease 250ms;
     cursor: pointer;
+  }
+  .bg-logo{
+    transform: scale(0.5);
+  }
+  .windows{
+    left: calc(50% + -105px);
+    top: calc(50% - 390px);
+  }
+  .aple{
+    left: calc(50% + -215px);
+    top: calc(50% - 65px);
+  }
+  .opera{
+    left: calc(50% + -225px);
+    top: calc(50% - 311px);
+  }
+  .finder{
+    left: calc(50% + -234px);
+    top: calc(50% - 193px);
+  }
+  .android{
+    left: calc(50% + 31px);
+    top: calc(50% - 399px);
+  }
+  .chrome{
+    left: calc(50% + 80px);
+    top: calc(50% - 278px);
+  }
+  .edge{
+    left: calc(50% + 100px);
+    top: calc(50% - 154px);
+  }
+  .firefox{
+    left: calc(50% + 39px);
+    top: calc(50% - 27px);
+  }
+  .circle__items{
+    margin-bottom: 80px;
+  }
+}
+@media (max-width:410px){
+  .container-circle{
+    overflow: hidden;
   }
 }
